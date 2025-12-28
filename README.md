@@ -9,6 +9,10 @@ This project analyzes borrower data to assess credit risk and predict default pr
 - `src/` – Reusable data processing and modeling code
 - `data/` – Raw data (not tracked)
 - `results/` – Figures and model outputs
+## Data Pipeline
+An ETL pipeline extracts raw client data, applies validation and transformations, and loads clean data into PostgreSQL.
+
+See `docs/schema.md` for schema and transformation details.
 
 ## Setup
 ```bash
