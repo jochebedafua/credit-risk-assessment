@@ -1,20 +1,16 @@
 # Credit Risk Assessment
-Understanding why clients are not repaying their loans and how to make better lending decisions.
 
 ## Overview
-This project analyzes borrower data to assess credit risk and predict default probability.
+This project analyzes borrower data to understand why clients are not repaying their loans and how to make better lending decisions.
 
 ## Project Structure
 - `notebooks/` – Exploratory and modeling notebooks
 - `src/` – Reusable data processing and modeling code
-- `data/` – Raw data (not tracked)
-- `results/` – Figures and model outputs
-## Data Pipeline
-An ETL pipeline extracts raw client data, applies validation and transformations, and loads clean data into PostgreSQL.
+- `data/` – Raw data
+- `docs/` – Schema design and transformation logic
+- `schema/` – Database setup for data and engineered features
 
-See `docs/schema.md` for schema and transformation details.
-
-## Setup
+## Run the Project
 ```bash
 python3 -m venv .venv
 source .venv/bin/activate
