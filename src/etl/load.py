@@ -2,10 +2,21 @@ from sqlalchemy.dialects.postgresql import insert
 from src.db.connection import get_engine
 
 def load_clients(df):
+    '''
+    Docstring for load_clients
+    
+    :param df: Description
+    '''
     engine = get_engine()
     df.to_sql("clients", engine, if_exists="append", index=False)
 
+
 def load_features(df):
+    '''
+    Docstring for load_features
+    
+    :param df: Description
+    '''
     engine = get_engine()
     features = df[[
         "client_id", "loan_date",

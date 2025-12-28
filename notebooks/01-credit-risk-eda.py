@@ -27,8 +27,7 @@
 import sys
 from pathlib import Path
 
-# Set the project root (adjust if your notebook is not in the root)
-project_root = Path().resolve().parent  # if notebook is in a subfolder like 'notebooks'
+project_root = Path().resolve().parent 
 sys.path.append(str(project_root))
 
 # print(sys.path)
@@ -46,6 +45,9 @@ from src.db.connection import get_engine
 
 plt.style.use("default")
 
+# %% [markdown]
+# ## 2. Load Data
+
 # %%
 # Load data
 
@@ -54,7 +56,7 @@ df = pd.read_sql("SELECT * FROM client_loan_features", engine)
 df.head()
 
 # %% [markdown]
-# ## 2. Exploratory Data Analysis
+# ## 3. Exploratory Data Analysis
 
 # %%
 # Basic info
@@ -149,5 +151,3 @@ sns.countplot(
 )
 plt.title("Repeat Borrower Status vs Default")
 plt.show()
-
-# %%

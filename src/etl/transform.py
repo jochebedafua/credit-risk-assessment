@@ -59,5 +59,7 @@ def transform_clients(df: pd.DataFrame) -> pd.DataFrame:
     df["income_to_loan_ratio"] = df["annual_income"] / df["loan_amount"]
     df["deposit_to_income_ratio"] = df["monthly_deposit"] / (df["annual_income"] + 1)
     df["employment_tenure_years"] = df["months_at_company"] / 12
+    df["credit_score_bucket"] = df["credit_score"] // 50
+    df["is_repeat_borrower"] = df["is_repeat_borrower"]
 
     return df

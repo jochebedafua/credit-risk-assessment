@@ -2,7 +2,7 @@ from src.etl.extract import extract_clients
 from src.etl.transform import transform_clients
 from src.etl.load import load_clients, load_features
 
-RAW_PATH = "data/raw/client_loan_data.csv"
+RAW_PATH = "data/client_loan_data.csv"
 
 def run():
     df = extract_clients(RAW_PATH)
