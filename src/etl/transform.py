@@ -54,7 +54,7 @@ def transform_clients(df: pd.DataFrame) -> pd.DataFrame:
         labels=[1, 2, 3, 4, 5]
     ).astype(int)
 
-    # Feature engineering
+    # Feature engineering (split)
     df["credit_utilization"] = df["loan_amount"] / (df["account_balance"] + 1)
     df["income_to_loan_ratio"] = df["annual_income"] / df["loan_amount"]
     df["deposit_to_income_ratio"] = df["monthly_deposit"] / (df["annual_income"] + 1)
